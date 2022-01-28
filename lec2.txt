@@ -3,3 +3,4 @@ After reading the paper, I have a deep understanding of MapReduce. The data skew
 To solve data skew in a MapReduce job, the solution that I provide is using the greedy algorithm in shuffle procedure, monitoring each node’s resources occupation, allocate the new key into the node that has the lowest working load. I think it can significantly reduce alleviate the data skew issue. However, if its deals with the computation skew issue, I think it may not very effective. After the split and putting the file into the map, the workload of each map may not be even. Once a slice of file in the map is extremely large it may cause the computation skew. 
  
 To solve both data skew and computation skew, I think in the split step, the system should split the file into evenly small pieces put them into the map, and apply the greedy algorithm in shuffle procedure. After those methods, I think data and computation skew can significantly alleviate.
+abcd
